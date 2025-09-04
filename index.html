@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Юлия Хохрякова | Профессиональный парикмахер-стилист</title>
+    <meta name="description" content="Профессиональные парикмахерские услуги от стилиста Юлии Хохряковой. Стрижки, окрашивание, укладки и многое другое." />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#ffffff',
+                        secondary: '#f3f4f6',
+                        accent: '#d1d5db',
+                        dark: '#111111',
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+
+    <!-- Flatpickr (календарь) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="min-h-screen">
+
+    <!-- Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-black z-50 flex items-center justify-center">
+        <div class="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-white"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-black bg-opacity-90 z-40 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-2xl font-bold text-white flex items-center">
+                    <i data-feather="scissors" class="mr-2"></i>
+                    <span>Юлия Хохрякова</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-white hover:text-gray-300 transition">Обо мне</a>
+                    <a href="#services" class="text-white hover:text-gray-300 transition">Услуги</a>
+                    <a href="#portfolio" class="text-white hover:text-gray-300 transition">Портфолио</a>
+                    <a href="#testimonials" class="text-white hover:text-gray-300 transition">Отзывы</a>
+                    <a href="#contact" class="text-white hover:text-gray-300 transition">Контакты</a>
+                    <a href="#booking" class="bg-white text-black px-4 py-2 rounded-full font-medium hover:bg-gray-200 transition">Записаться</a>
+                </div>
+                <button id="hamburger" class="md:hidden focus:outline-none">
+                    <div class="hamburger-menu">
+                        <span class="block w-6 h-0.5 bg-white my-1"></span>
+                        <span class="block w-6 h-0.5 bg-white my-1"></span>
+                        <span class="block w-6 h-0.5 bg-white my-1"></span>
+                    </div>
+                </button>
+            </div>
+            <div id="mobileMenu" class="mobile-menu md:hidden">
+                <div class="pt-4 pb-2 space-y-2">
+                    <a href="#about" class="block px-3 py-2 text-white hover:bg-gray-800 rounded">Обо мне</a>
+                    <a href="#services" class="block px-3 py-2 text-white hover:bg-gray-800 rounded">Услуги</a>
+                    <a href="#portfolio" class="block px-3 py-2 text-white hover:bg-gray-800 rounded">Портфолио</a>
+                    <a href="#testimonials" class="block px-3 py-2 text-white hover:bg-gray-800 rounded">Отзывы</a>
+                    <a href="#contact" class="block px-3 py-2 text-white hover:bg-gray-800 rounded">Контакты</a>
+                    <a href="#booking" class="block px-3 py-2 bg-white text-black rounded-full text-center font-medium">Записаться</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center">
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <img src="https://picsum.photos/1920/1080?hair-studio" alt="Салон" class="absolute inset-0 w-full h-full object-cover -z-10">
+        <div class="relative text-center z-10 px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-up">Юлия Хохрякова</h1>
+            <p class="text-xl md:text-2xl mb-8" data-aos="fade-up" data-aos-delay="100">Профессиональный парикмахер-стилист</p>
+            <a href="#booking" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition inline-block" data-aos="fade-up" data-aos-delay="200">Записаться на прием</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <img src="https://picsum.photos/600/800?hair-stylist" alt="Юлия Хохрякова" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="text-3xl font-bold mb-4">Обо мне</h2>
+                    <p class="text-gray-300 mb-4">Более 10 лет я помогаю клиентам чувствовать себя уверенно и красиво. Моя работа — это не просто стрижка, а творческий процесс, где важен каждый штрих.</p>
+                    <p class="text-gray-300 mb-4">Я использую только профессиональные средства и следую современным трендам, сохраняя индивидуальность каждого клиента.</p>
+                    <ul class="space-y-2 mt-6">
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Сертифицированный стилист</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Работаю с 2013 года</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-green-500 mr-2"></i> Индивидуальный подход</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-aos="fade-up">Услуги</h2>
+            <p class="text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">Широкий спектр парикмахерских услуг, выполненных с любовью и профессионализмом</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-900 p-6 rounded-lg" data-aos="fade-up">
+                    <img src="https://picsum.photos/400/300?hair-cut" alt="Женская стрижка" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-xl font-bold mb-2">Женская стрижка</h3>
+                    <p class="text-gray-300 mb-4">Современные и классические стрижки с учетом структуры волос и формы лица.</p>
+                    <div class="flex justify-between">
+                        <span class="font-bold">2500 ₽</span>
+                        <span class="text-sm text-gray-400">60–90 мин</span>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://picsum.photos/400/300?man-haircut" alt="Мужская стрижка" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-xl font-bold mb-2">Мужская стрижка</h3>
+                    <p class="text-gray-300 mb-4">Современные мужские стрижки с учетом особенностей волос и стиля клиента.</p>
+                    <div class="flex justify-between">
+                        <span class="font-bold">2000 ₽</span>
+                        <span class="text-sm text-gray-400">45–60 мин</span>
+                    </div>
+                </div>
+                <div class="bg-gray-900 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://picsum.photos/400/300?coloring" alt="Окрашивание" class="w-full h-48 object-cover rounded mb-4">
+                    <h3 class="text-xl font-bold mb-2">Окрашивание волос</h3>
+                    <p class="text-gray-300 mb-4">Профессиональное окрашивание с учетом цветотипа и состояния волос.</p>
+                    <div class="flex justify-between">
+                        <span class="font-bold">от 3500 ₽</span>
+                        <span class="text-sm text-gray-400">90–120 мин</span>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="services.html" class="inline-block border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">Все услуги</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-aos="fade-up">Портфолио</h2>
+            <p class="text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">Примеры моих работ, которые вдохновляют и помогают клиентам определиться с выбором</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="portfolio-item overflow-hidden rounded-lg" data-aos="fade-up">
+                    <div class="relative group">
+                        <img src="https://picsum.photos/640/360?hair1" alt="Пример работы 1" class="w-full h-64 object-cover transition duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="view-portfolio-btn bg-white text-black px-4 py-2 rounded-full" data-img="https://picsum.photos/1200/630?hair1">Увеличить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative group">
+                        <img src="https://picsum.photos/640/360?hair2" alt="Пример работы 2" class="w-full h-64 object-cover transition duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="view-portfolio-btn bg-white text-black px-4 py-2 rounded-full" data-img="https://picsum.photos/1200/630?hair2">Увеличить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative group">
+                        <img src="https://picsum.photos/640/360?hair3" alt="Пример работы 3" class="w-full h-64 object-cover transition duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="view-portfolio-btn bg-white text-black px-4 py-2 rounded-full" data-img="https://picsum.photos/1200/630?hair3">Увеличить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item overflow-hidden rounded-lg" data-aos="fade-up">
+                    <div class="relative group">
+                        <img src="https://picsum.photos/640/360?hair4" alt="Пример работы 4" class="w-full h-64 object-cover transition duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="view-portfolio-btn bg-white text-black px-4 py-2 rounded-full" data-img="https://picsum.photos/1200/630?hair4">Увеличить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative group">
+                        <img src="https://picsum.photos/640/360?hair5" alt="Пример работы 5" class="w-full h-64 object-cover transition duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="view-portfolio-btn bg-white text-black px-4 py-2 rounded-full" data-img="https://picsum.photos/1200/630?hair5">Увеличить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative group">
+                        <img src="https://picsum.photos/640/360?hair6" alt="Пример работы 6" class="w-full h-64 object-cover transition duration-500">
+                        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <button class="view-portfolio-btn bg-white text-black px-4 py-2 rounded-full" data-img="https://picsum.photos/1200/630?hair6">Увеличить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12" data-aos="fade-up">
+                <a href="portfolio.html" class="inline-block border border-white px-6 py-3 rounded-full hover:bg-white hover:text-black transition">Посмотреть всё портфолио</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-aos="fade-up">Отзывы клиентов</h2>
+            <p class="text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">Что говорят мои клиенты о работе и результатах</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/100/100?client1" alt="Клиент 1" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Анна С.</h4>
+                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Юлия сделала мне стрижку каре, и я в восторге! Очень аккуратно, красиво, с учётом моего типа лица. Теперь хожу только к ней."</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/100/100?client2" alt="Клиент 2" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Михаил К.</h4>
+                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Отличный мастер! Сделал мне модную стрижку, всё чётко и по делу. Рекомендую всем мужчинам, кто ценит качество."</p>
+                </div>
+                <div class="testimonial-card p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img src="https://picsum.photos/100/100?client3" alt="Клиент 3" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Елена П.</h4>
+                            <div class="text-yellow-400 text-sm">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300">"Окрашивание волос было выполнено без повреждений. Цвет держится долго, блеск идеальный. Спасибо, Юлия!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-4" data-aos="fade-up">Записаться на приём</h2>
+            <p class="text-center mb-12 max-w-2xl mx-auto" data-aos="fade-up">Выберите удобное время и услугу — я свяжусь с вами для подтверждения</p>
+            <form id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="max-w-3xl mx-auto space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block mb-2">Имя*</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                    <div>
+                        <label for="phone" class="block mb-2">Телефон*</label>
+                        <input type="tel" id="phone" name="phone" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-white">
+                    </div>
+                </div>
+                <div>
+                    <label for="email" class="block mb-2">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-white">
+                </div>
+                <div>
+                    <label for="service" class="block mb-2">Услуга*</label>
+                    <select id="service" name="service" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-white">
+                        <option value="" disabled selected>Выберите услугу</option>
+                        <option value="Женская стрижка">Женская стрижка</option>
+                        <option value="Мужская стрижка">Мужская стрижка</option>
+                        <option value="Окрашивание волос">Окрашивание волос</option>
+                        <option value="Кератиновое выпрямление">Кератиновое выпрямление</option>
+                        <option value="Вечерняя прическа">Вечерняя прическа</option>
+                        <option value="SPA-уход">SPA-уход</option>
+                        <option value="Другое">Другое</option>
+                    </select>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="date" class="block mb-2">Дата*</label>
+                        <input type="text" id="date" name="date" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-white flatpickr">
+                    </div>
+                    <div>
+                        <label for="time" class="block mb-2">Время*</label>
+                        <select id="time" name="time" required class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-white">
+                            <option value="" disabled selected>Выберите время</option>
+                            <option value="10:00">10:00</option>
+                            <option value="11:00">11:00</option>
+                            <option value="12:00">12:00</option>
+                            <option value="13:00">13:00</option>
+                            <option value="14:00">14:00</option>
+                            <option value="15:00">15:00</option>
+                            <option value="16:00">16:00</option>
+                            <option value="17:00">17:00</option>
+                            <option value="18:00">18:00</option>
+                            <option value="19:00">19:00</option>
+                        </select>
+                    </div>
+                </div>
+                <div>
+                    <label for="message" class="block mb-2">Дополнительная информация</label>
+                    <textarea id="message" name="message" rows="4" class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-white text-black px-8 py-3 rounded-full font-bold hover:bg-gray-200 transition">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <a href="#" class="text-2xl font-bold text-white flex items-center mb-4">
+                        <i data-feather="scissors" class="mr-2"></i>
+                        <span>Юлия Хохрякова</span>
+                    </a>
+                    <p class="text-gray-400">Профессиональные парикмахерские услуги с индивидуальным подходом к каждому клиенту.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Навигация</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Обо мне</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-white transition">Услуги</a></li>
+                        <li><a href="#portfolio" class="text-gray-400 hover:text-white transition">Портфолио</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-white transition">Отзывы</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Контакты</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Услуги</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Стрижки</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Окрашивание</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Укладки</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Кератиновое выпрямление</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Вечерние прически</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Контакты</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400"><i data-feather="map-pin" class="mr-2 w-4 h-4"></i><span>г. Москва, ул. Тверская, д. 10</span></li>
+                        <li class="flex items-center text-gray-400"><i data-feather="phone" class="mr-2 w-4 h-4"></i><span>+7 (999) 123-45-67</span></li>
+                        <li class="flex items-center text-gray-400"><i data-feather="mail" class="mr-2 w-4 h-4"></i><span>yulia.hair@example.com</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Юлия Хохрякова. Все права защищены.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition text-sm">Политика конфиденциальности</a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-sm">Условия использования</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top bg-white text-black w-12 h-12 rounded-full flex items-center justify-center shadow-lg">
+        <i data-feather="arrow-up"></i>
+    </a>
+
+    <!-- Portfolio Modal -->
+    <div id="portfolioModal" class="modal fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <div class="relative max-w-4xl w-full">
+            <button id="closeModal" class="absolute -top-12 right-0 text-white hover:text-gray-300">
+                <i data-feather="x" class="w-8 h-8"></i>
+            </button>
+            <div class="absolute bottom-4 right-4 flex space-x-2">
+                <button id="zoomIn" class="bg-white text-black w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-200 transition">
+                    <i data-feather="zoom-in"></i>
+                </button>
+                <button id="zoomOut" class="bg-white text-black w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-200 transition">
+                    <i data-feather="zoom-out"></i>
+                </button>
+                <button id="resetZoom" class="bg-gray-700 text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-600 transition" title="Сбросить масштаб">
+                    <i data-feather="minimize"></i>
+                </button>
+            </div>
+            <img id="modalImage" src="" alt="" class="w-full max-h-screen object-contain">
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-lg p-8 max-w-md w-full text-center">
+            <i data-feather="check-circle" class="w-16 h-16 text-green-500 mx-auto mb-4"></i>
+            <h3 class="text-2xl font-bold mb-4">Спасибо!</h3>
+            <p class="mb-6">Ваша заявка успешно отправлена. Я свяжусь с вами в ближайшее время для подтверждения записи.</p>
+            <button id="closeSuccessModal" class="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-gray-200 transition">Закрыть</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

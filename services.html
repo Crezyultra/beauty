@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Услуги | Юлия Хохрякова</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body class="bg-black">
+    <header class="bg-black py-6 shadow-lg">
+        <div class="container mx-auto px-6">
+            <a href="../index.html" class="text-2xl font-bold text-white flex items-center">
+                <i data-feather="scissors" class="mr-2"></i>
+                Юлия Хохрякова
+            </a>
+        </div>
+    </header>
+
+    <section class="py-16">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl font-bold text-center mb-4">Мои услуги</h1>
+            <p class="text-center text-gray-400 mb-12">Выберите категорию, чтобы посмотреть подробности</p>
+
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="tab-btn active px-6 py-3 rounded-full font-medium" data-tab="all">Все</button>
+                <button class="tab-btn px-6 py-3 rounded-full font-medium" data-tab="women">Женские</button>
+                <button class="tab-btn px-6 py-3 rounded-full font-medium" data-tab="men">Мужские</button>
+                <button class="tab-btn px-6 py-3 rounded-full font-medium" data-tab="coloring">Окрашивание</button>
+                <button class="tab-btn px-6 py-3 rounded-full font-medium" data-tab="care">Уход</button>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden" data-category="women">
+                    <img src="https://picsum.photos/400/300?hair-cut" alt="Женская стрижка" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Женская стрижка</h3>
+                        <p class="text-gray-300 mb-4">Современные и классические стрижки с учетом структуры волос и формы лица.</p>
+                        <div class="flex justify-between">
+                            <span class="font-bold text-lg">2500 ₽</span>
+                            <span class="text-sm text-gray-400">60–90 мин</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden" data-category="men">
+                    <img src="https://picsum.photos/400/300?man-cut" alt="Мужская стрижка" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Мужская стрижка</h3>
+                        <p class="text-gray-300 mb-4">Современные мужские стрижки с учетом особенностей волос и стиля клиента.</p>
+                        <div class="flex justify-between">
+                            <span class="font-bold text-lg">2000 ₽</span>
+                            <span class="text-sm text-gray-400">45–60 мин</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden" data-category="coloring">
+                    <img src="https://picsum.photos/400/300?coloring" alt="Окрашивание" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Окрашивание волос</h3>
+                        <p class="text-gray-300 mb-4">Профессиональное окрашивание с учетом цветотипа и состояния волос.</p>
+                        <div class="flex justify-between">
+                            <span class="font-bold text-lg">от 3500 ₽</span>
+                            <span class="text-sm text-gray-400">90–120 мин</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden" data-category="care">
+                    <img src="https://picsum.photos/400/300?keratin" alt="Кератин" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Кератиновое выпрямление</h3>
+                        <p class="text-gray-300 mb-4">Процедура для гладкости и блеска волос с защитным эффектом.</p>
+                        <div class="flex justify-between">
+                            <span class="font-bold text-lg">от 5000 ₽</span>
+                            <span class="text-sm text-gray-400">120–180 мин</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden" data-category="women">
+                    <img src="https://picsum.photos/400/300?evening" alt="Вечерняя прическа" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Вечерняя прическа</h3>
+                        <p class="text-gray-300 mb-4">Элегантные прически для особых случаев и торжеств.</p>
+                        <div class="flex justify-between">
+                            <span class="font-bold text-lg">от 4000 ₽</span>
+                            <span class="text-sm text-gray-400">60–90 мин</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-card bg-gray-900 rounded-lg overflow-hidden" data-category="care">
+                    <img src="https://picsum.photos/400/300?spa" alt="SPA-уход" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">SPA-уход за волосами</h3>
+                        <p class="text-gray-300 mb-4">Глубокое восстановление волос с масками и маслами.</p>
+                        <div class="flex justify-between">
+                            <span class="font-bold text-lg">2000 ₽</span>
+                            <span class="text-sm text-gray-400">60 мин</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        feather.replace();
+
+        const tabs = document.querySelectorAll('.tab-btn');
+        const cards = document.querySelectorAll('.service-card');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                const category = tab.dataset.tab;
+
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+
+                cards.forEach(card => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
